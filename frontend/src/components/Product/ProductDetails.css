@@ -1,0 +1,215 @@
+.ProductDetails{
+    background-color: white;
+    display: flex;
+    padding: 6vmax;
+    width: 100vw;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.ProductDetails > div{
+    /* background-color: rgb(189, 184, 184); */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2vmax;
+    box-sizing: border-box;
+}
+.ProductDetails div:first-child{
+    width: 100%;
+}
+.ProductDetails div:last-child{
+    align-items:flex-start;
+}
+.CarouselImage{
+    width: 30vw;
+}
+.detailsBlock-1 h2{
+    color: rgb(220, 209, 209);
+    font: 900 1.7rem cursive;
+    /* text-align: center; */
+    padding: 1vmax;
+}
+.detailsBlock-1 p{
+    font: 400 1.5rem cursive;
+    color: rgb(144, 135, 135);
+    padding-bottom: 3vmax;
+}
+.detailsBlock-2{
+    display: flex;
+    /* justify-content: flex-start;
+    align-items: center; */
+    border-top: 1px solid rgba(98, 91, 91, 0.49);
+    padding: 2vmax;
+    font-size: 1.5vmax;
+    width: 70%;
+    border-bottom: 1px solid rgba(98, 91, 91, 0.49);
+}
+.detailsBlock-2 ReactStars{
+    font-size: 1.5vmax;
+}
+.detailsBlock-2 span{
+   font: 200 cursive;
+}
+.detailsBlock-3{
+    width: 70%;
+    margin: 3vmax 0;
+}
+
+.detailsBlock-3 h1{
+    color: rgba(0, 0, 0, 0.571);
+    font: 400 1.6vmax "Franklin Gothic Medium";
+    /* text-align: center; */
+}
+
+.detailsBlock-3-1{
+    display: flex;
+    /* align-items: center; */
+    padding: 1.5vmax;
+    margin-bottom: 2vmax;
+}
+
+.detailsBlock-3-1-1 button{
+    border: none;
+    background-color: rgb(136, 125, 125);
+    padding: 1vmax;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: rgb(254, 249, 249);
+    transition: all 0.4s;
+}
+
+.detailsBlock-3-1-1 button:hover{
+    background-color: rgba(192, 11, 11, 0.835);
+}
+
+.detailsBlock-3-1-1 input{
+    border: none;
+    padding: 1vmax;
+    width: 3vmax;
+    /* text-align: center; */
+    outline: none;
+    font: 400 1.2vmax "Roboto";
+    color: rgb(117, 114, 114);
+}
+.detailsBlock-3-1 >button:last-child{
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: all 0.5s;
+    background-color: tomato;
+    font: 500 1.2vmax "Roboto";
+    border-radius: 20px;
+    padding: 1vmax;
+   
+    outline: none;
+    width: 20vmax;
+}
+.detailsBlock-3-1 > button:last-child:hover{
+    background-color: rgb(190, 36, 8);
+}
+
+.detailsBlock-3 > p {
+    /* margin: 1.3vmax; */
+    border-top: 1px solid rgba(22, 21, 21, 0.883);
+    border-bottom:1px solid rgba(22, 21, 21, 0.883);
+    padding: 1vmax 0;
+    color: rgba(134, 127, 127, 0.609);
+    font: 600 1.4vmax "Roboto";
+    margin: 1vmax 0;
+    /* text-align: center; */
+}
+
+.detailsBlock-4{
+    color: rgba(0, 0, 0, 0.785);
+    font: 600 2vmax sans-serif;
+}
+
+.detailsBlock-4 p{
+    color: rgba(0, 0, 0, 0.341);
+    font: 300 1.6vmax sans-serif;
+    align-self: flex-start;
+}
+.submitReview{
+    border: none;
+    background-color: tomato;
+    font: 700 1.3rem "Roboto";
+    border-radius: 20px;
+    padding: 0.6vmax 2vmax;
+    margin: 1vmax 0;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+}
+.submitReview:hover{
+    background-color: rgb(224, 47, 15);
+    transform: scale(1.1);
+}
+
+/* review start here */
+.reviewHeading{
+    color: black;
+    font: 600 1.8rem "Roboto";
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 1vmax;
+    width: 20vmax;
+    margin: auto;
+    margin-bottom: 4vmax;
+}
+
+.reviewCard{
+    flex: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.593);
+    border: 1px solid rgba(19, 18, 18, 0.695);
+    width: 20vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1vmax;
+    padding: 3vmax;
+
+}
+.reviews{
+    display: flex;
+    overflow: auto;
+}
+
+.reviewCard img{
+    width: 10vmax;
+}
+.reviewCard p{
+    color: rgba(0, 0, 0, 0.532);
+    font: 800 1.1rem "Roboto";
+}
+.reviewCard span{
+    color: rgba(0, 0, 0, 0.439);
+    font: 500 0.8rem "Roboto";
+}
+.noReviews{
+    font: 600 1.3rem "Gill Sans";
+    text-align: center;
+    color: rgb(44, 41, 41);
+}
+
+
+@media screen and (max-width:600px){
+    .ProductDetails{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 1.3rem;
+        margin: 1vmax auto;
+    }
+    
+    .container .detailsBlock-1 h2{
+        font-size: 2vmax;
+    }
+    .container .detailsBlock-1 p{
+        font-size: 1vmax;
+    }
+}

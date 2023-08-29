@@ -1,14 +1,11 @@
 
 //creating a token and saving into cookie
 const sendToken = (user, statusCode, res) => {
-    const token = user.getJWTToken();
-
+    const token=user.getJWTToken();
+    // console.log(token)
     //options for cookie
-    // const expireToken = 5;
     const options = {
-        expires: new Date(
-            Date.now() + 5 * 24 * 60 * 60 * 1000
-            ),
+        expires: new Date(Date.now() +20 * 60 * 1000), //process.env.JWT_TOKEN_EXPIRES
         httpOnly:true,
     }
     res.status(statusCode).cookie("token",token,options).json({

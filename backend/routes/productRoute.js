@@ -1,17 +1,38 @@
-const express=require('express');
+const express = require("express");
 
-const {getAllProducts,createProduct, updateProduct, deleteProduct, getProductDetails}=require('../controllers/productController');
+const {
+  getAllProducts,
+  createProduct,
+  updateProduct,
+  deleteProduct,
+  getProductDetails,
+  createProductReview,
+  getAllProductReviews,
+  deleteReviews,
+} = require("../controllers/productController");
 
-const { isAuthenticatedUser, authorizedRoles } = require('../middleware/Auth');
+const { isAuthenticatedUser, authorizedRoles } = require("../middleware/Auth");
 
 const router = express.Router();
 
-router.route('/products').get( getAllProducts)
-router.route('/product/new').post(isAuthenticatedUser,authorizedRoles("admin"),createProduct)
-router.route('/product/:id')
-.put(isAuthenticatedUser,authorizedRoles("admin"),updateProduct)
-.delete(isAuthenticatedUser,authorizedRoles("admin"),deleteProduct)
-.get(getProductDetails)
+router.route("/products").get(getAllProducts);
 
-module.exports=router;
+router
+  .route("/admin/product/new")
+  .post(isAuthenticatedUser, authorizedRoles("admin"), createProduct);
 
+router
+  .route("/admin/product/:id")
+  .put(isAuthenticatedUser, authorizedRoles("admin"), updateProduct)
+  .delete(isAuthenticatedUser, authorizedRoles("admin"), deleteProduct);
+  
+  router.route("/product/:id").get(getProductDetails); //for extra check will delte later
+
+router.route("/review").put(isAuthenticatedUser, createProductReview);
+
+router
+  .route("/reviews")
+  .get(getAllProductReviews)
+  .delete(isAuthenticatedUser, deleteReviews);
+
+module.exports = router;

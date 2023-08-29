@@ -1,0 +1,27 @@
+for creating orders
+
+{
+  "shippingInfo":{
+    "address":"anywhere",
+    "city":"birgunj",
+    "state":"narayani",
+    "country":"Nepal",
+    "pinCode":44300,
+    "phoneNo":8969357598
+  },
+  "orderItems":{
+    "name":"rice",
+    "price":100,
+    "quantity":3,
+    "image":"product image url",
+    "product":""
+  },
+  "paymentInfo":{
+    "id":"sample payment info",
+    "status":"succeded"
+  },
+  "itemsPrice":50,
+  "shippingPrice":10,
+  "taxPrice":5,
+  "totalPrice":130
+}

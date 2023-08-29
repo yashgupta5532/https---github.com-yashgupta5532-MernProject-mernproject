@@ -1,0 +1,116 @@
+.banner{
+    background-image: linear-gradient(to right,rgb(161, 116, 168),rgb(82, 82, 215));
+    height: 100vmin;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    background-color: black;
+    color: white;
+}
+
+.banner p{
+    font-size: 1.7rem;
+    padding: 10px;
+}
+
+.banner a button{
+    margin-top: 1.5%;
+    padding: 10px;
+    background-color: rgb(233, 235, 240);
+    border-radius: 10%;
+    border: none;
+    outline: none;
+}
+.banner a{
+    margin: 3.5%;
+
+}
+
+.banner button:hover{
+    background-color: rgb(52, 64, 195);
+    color: rgb(244, 237, 237);
+}
+
+.banner ::after{
+    content: "";
+    width: 100vw;
+    height: 100vmin;
+    background-color: white;
+    position: absolute;
+    clip-path: polygon(100% 70%, 0% 100%, 100% 100%);
+    top: 0%;
+    left: 0%;
+}
+
+.homeHeading{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.8vmax;
+    border-bottom: 2px solid rgba(28, 26, 26, 0.854);
+    width: 40vmax;
+    padding: 1vmax;
+    margin: 5vmax auto;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.productCard{
+    max-width: 27%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: rgba(176, 168, 168, 0.842);
+    margin: 2vmax;
+    transition: all 0.5s;
+    padding-bottom: 0.5vmax;
+    border: 1px solid black;
+    text-align: center;
+}
+.productCard:hover{
+    box-shadow: 0 0 5px rgb(86, 84, 84);
+    transform: translateY(-1vmax);
+}
+.productCard div{
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.productCard div span{
+    margin-top: 1vmax;
+}
+.productCard span:not(.productCard div span){
+    color: orangered;
+    font-size: 1.4rem;
+}
+.productCard p{
+    font-size: 1.6rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: black;
+}
+
+
+
+@media screen and (max-width:660px){
+    .productCard div{
+        margin-right: 0px;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: flex-start;
+    
+    }
+    .productCard div span{
+        margin-top: 1vmax;
+    }
+}

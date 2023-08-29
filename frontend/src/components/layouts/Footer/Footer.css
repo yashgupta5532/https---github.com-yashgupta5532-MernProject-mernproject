@@ -1,0 +1,133 @@
+
+
+#footer{
+    position: absolute;
+    /* bottom: 0%; */
+    display:flex;
+    justify-content: space-around;
+    /* border: 1px solid black; */
+    text-align: center;
+    background-color: rgba(51, 49, 49, 0.851);
+    color: white;
+    min-width: 100%;
+}
+
+.left-footer{
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    /* border: 1px solid red; */
+}
+.left-footer h1{
+    padding: 5px 0px;
+}
+.left-footer p{
+    padding: 10px 0px;
+}
+.left-footer img{
+    width:80%;
+    /* border-radius: 30%; */
+}
+/* .left-footer img #logo{
+    width: 30%;
+} */
+
+
+.mid-footer{
+    margin-left: -5vmax;
+    text-align: center;
+    line-height: 5cap;
+}
+.mid-footer h1{
+    font-size: 2rem;
+    color: orangered;
+    margin-left: 0%;
+    padding: 2%;
+}
+.mid-footer p{
+    padding: 5px 0px;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    word-wrap: normal;
+}
+
+.right-footer .anchor{
+    display: flex;
+    flex-direction: column;
+}
+.right-footer h3{
+    font-size: 2rem;
+    cursor: pointer;
+    text-decoration: underline red;
+}
+.right-footer .anchor a{
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    padding: 10px;
+    transition: 1s;
+    color:gray;
+    font-size: 1.2rem;
+}
+
+.right-footer .anchor a:hover{
+    transform: rotateX('180');
+    color: rgb(101, 181, 72);
+    text-decoration: underline;
+    box-shadow: 5px 5px 2px blue;
+    font-size: 1.4rem;
+}
+
+
+
+
+@media screen and (max-width:900px){
+
+    .left-footer h1{
+        font-size: x-large;
+    }
+
+    .mid-footer h1{
+        font-size: x-large;
+    }
+
+    .right-footer h3{
+        font-size: x-large;
+    }
+    .right-footer .anchor a{
+        font-size: medium;
+        padding: 8px;
+    }
+    
+    .right-footer .anchor a:hover{
+        transform: rotateX('180');
+        color: rgb(80, 233, 24);
+        text-decoration: underline;
+        box-shadow: 5px 2px 2px blue;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:720px) {
+    #footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #footer .left-footer,.mid-footer,.right-footer{
+        padding: 10px;
+    }
+    #footer .left-footer,.mid-footer,.right-footer{
+        font-size: 1.7rem;
+        max-width: 100%;
+
+    }
+    .left-footer img{
+        margin: 2px auto;
+        max-width: 100%;
+    }
+    
+}

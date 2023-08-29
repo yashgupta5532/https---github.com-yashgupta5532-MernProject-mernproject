@@ -27,7 +27,7 @@ const productSchema =new mongoose.Schema({
             }
         }
     ],
-    rating:{
+    ratings:{
         type: Number,
         default: 0
     },
@@ -45,6 +45,11 @@ const productSchema =new mongoose.Schema({
     },
     reviews: [
         {
+            user:{  //one who create the website admin
+                type:mongoose.Schema.ObjectId,
+                ref:"User",
+                required:true
+            },
             name: {
                 type: String,
                 required: [true, "Please Enter your name"]
@@ -59,7 +64,7 @@ const productSchema =new mongoose.Schema({
             }
         }
     ],
-    user:{  //one who create the website 
+    user:{  //one who create the website admin
         type:mongoose.Schema.ObjectId,
         ref:"User",
         required:true
@@ -70,4 +75,7 @@ const productSchema =new mongoose.Schema({
     }
 })
 
+productSchema.methods.isReviewed=function(){
+
+}
 module.exports = mongoose.model("Product", productSchema);

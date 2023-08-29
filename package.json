@@ -4,13 +4,18 @@
   "description": "this is a mern project",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node backend/server.js",
-    "dev": "nodemon"
+    "dev": "nodemon backend/server.js"
   },
   "author": "yash",
   "license": "ISC",
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/roboto": "^5.0.5",
+    "@material-ui/core": "^4.12.4",
+    "@mui/icons-material": "^5.14.1",
+    "@mui/material": "^5.14.2",
+    "@mui/styled-engine-sc": "^5.12.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
@@ -19,6 +24,8 @@
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.3.4",
     "nodemailer": "^6.9.4",
+    "react-material-ui-carousel": "^3.4.2",
+    "styled-components": "^5.3.11",
     "validator": "^13.9.0"
   }
 }
