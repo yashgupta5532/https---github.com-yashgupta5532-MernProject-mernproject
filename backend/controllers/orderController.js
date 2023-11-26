@@ -34,7 +34,6 @@ exports.newOrder = catchAsyncErrors(async (req, res, next) => {
 });
 
 //get single order details
-
 exports.getSingleOrder = catchAsyncErrors(async (req, res, next) => {
   const order = await Order.findById(req.params.id).populate(
     "user",

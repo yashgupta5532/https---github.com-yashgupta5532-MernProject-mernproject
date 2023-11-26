@@ -11,6 +11,108 @@
 .products{
     display: flex;
     flex-wrap: wrap;
-    padding: 0 5vmax;
+    justify-content: space-around;
+    margin-left: 15vmax;
+    min-height: 40vh;
+}
+
+
+.paginationBox{
+    display: flex;
     justify-content: center;
+    margin: 6vmax;
+    background-color: white;
+}
+
+.pagination{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.page-item{
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    padding: 1.5vmax 2vmax;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.page-item:first-child{
+    border-radius: 5px 0 0 5px;
+}
+.page-item:last-child{
+    border-radius: 0 5px 5px 0;
+}
+.page-link{
+    /* text-decoration: none; */
+    font: 1.1rem "Roboto";
+    transition: all 0.3s;
+    color: rgba(32, 29, 29, 0.842);
+}
+
+.page-item:hover {
+    background-color: rgb(69, 229, 16);
+}
+
+.page-item:hover .page-link{
+    color: dodgerblue;
+}
+
+.pageItemActive{
+    background-color: tomato;
+}
+
+.pageLinkActive{
+    color: white;
+}
+
+.filterBox{
+    width: 15vmax;
+    justify-content: center;
+    position: absolute;
+    top: 6vmax;
+    left: 2vmax;
+}
+
+.category-link{
+    list-style: none;
+    font: 400 1.4vmax "Roboto";
+    letter-spacing: 1cap;
+    list-style: none;
+    transition: all0.3s;
+    padding: 1vmax;
+    cursor: pointer;
+}
+.category-link:hover{
+    color: tomato;
+}
+
+.rating{
+    margin-top: 2vmax;
+    /* height: 5vh; */
+}
+.rating fieldset{
+    padding: 0.5vmax;
+}
+
+@media screen and (max-width:650px){
+    .products{
+        margin-left: 3vmax;
+    }
+    .filterBox{
+        width: 20vmax;
+        position: static;
+        margin: 10vmax auto;
+    }
+    .page-link{
+        font: 300 2.3vmax "Roboto";
+    }
+    .category-link{
+        font: 400 2.4vmax "Roboto";
+    }
+    .categoryBox{
+        display: flex;
+        margin-left: -20vmax;
+        padding: 1vmax;
+    }
 }

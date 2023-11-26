@@ -7,34 +7,38 @@ import { useParams } from "react-router-dom";
 import "./ProductDetails.css";
 import { Typography } from "@mui/material";
 import ReviewCard from "./ReviewCard";
-import {useAlert} from 'react-alert';
+import { useAlert } from "react-alert";
+import MetaData from "../layouts/MetaData";
+import Loader from "../layouts/Loader/Loader";
 
 const ProductDetails = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const alert =useAlert();
+  const alert = useAlert();
   const { product, loading, error } = useSelector(
     (state) => state.productDetails
   );
   useEffect(() => {
-    if(error){
+    if (error) {
       alert.error(error);
       dispatch(clearErrors());
     }
     dispatch(getProductDetails(id));
-  }, [dispatch, id, product,alert ,error]);
+  }, [dispatch, id, product, alert, error]);
 
   const options = {
     edit: false,
     color: "gray",
     activeColor: "tomato",
-    size:window.innerWidth < 600 ? 20 :25,
+    size: window.innerWidth < 600 ? 20 : 25,
     value: product.ratings,
     isHalf: true,
   };
+  // let productName=(product.name).toUpperCase();
 
   return (
     <Fragment>
+      <MetaData title={`${product.name}-ECOMMERCE`} />
       <div className="ProductDetails">
         <div>
           <Carousel>
@@ -83,17 +87,18 @@ const ProductDetails = () => {
       </div>
 
       <h3 className="reviewHeading">Reviews</h3>
-      {
-        product.reviews && product.reviews[0]?(
-          <div className="reviews">
-            {product.reviews && product.reviews.map((review)=>
-            <ReviewCard review ={review}/>
-            )}
-          </div>
-        ):(
-          <Typography variant="h4" className="noReviews">No Reviews Yet</Typography>
-        )
-      }
+      {product.reviews && product.reviews[0] ? (
+        <div className="reviews">
+          {product.reviews &&
+            product.reviews.map((review) => (
+              <ReviewCard review={review} key={product.reviews._id} />
+            ))}
+        </div>
+      ) : (
+        <Typography variant="h4" className="noReviews">
+          No Reviews Yet
+        </Typography>
+      )}
     </Fragment>
   );
 };

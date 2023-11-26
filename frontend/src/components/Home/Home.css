@@ -59,7 +59,10 @@
 #container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    margin: 2vmax auto;
+  width: 80vw;
+  justify-content: center;
+  max-width: 100%;
 }
 
 .productCard{

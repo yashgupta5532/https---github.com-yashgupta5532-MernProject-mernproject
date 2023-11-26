@@ -1,12 +1,18 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
+const fileUpload = require("express-fileupload");
+const cors = require("cors");
 const app = express();
 const errorMiddleware = require("./middleware/error");
 const dotenv = require("dotenv");
 dotenv.config({ path: "./backend/config/.env" });
 
+app.use(cors({ origin: "http://localhost:3000" }));
 app.use(express.json());
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(fileUpload());
 
 //import routes
 const product = require("./routes/productRoute");

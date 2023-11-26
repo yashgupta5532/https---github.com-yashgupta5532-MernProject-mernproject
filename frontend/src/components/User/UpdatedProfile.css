@@ -1,0 +1,105 @@
+.updateProfileContainer{
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(212, 195, 195);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+}
+
+.updateProfileBox{
+    background-color: white;
+    width: 30vw;
+    height: 80vh;
+    box-sizing: border-box;
+}
+.updateProfileHeading {
+    text-align: center;
+    font: 500 2vmax;
+    color: rgba(0, 0, 0, 0.667);
+    margin-bottom: 0.5vmax;
+    width: 20vw;
+    margin: auto;
+    margin-top: 2vmax;
+    padding-bottom: 1vmax;
+    border-bottom: 1px solid rgb(73, 67, 67);
+}
+
+.updateProfileForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2vmax;
+    justify-content: space-evenly;
+    height: 70%;
+    transition: all 0.3s;
+}
+
+.updateProfileForm >div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.updateProfileForm > div > input{
+    padding: 1vmax 4vmax;
+    padding-right: 1vmax;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.353);
+    border-radius: 4px;
+    font: 300 1.2vmax cursive;
+    outline: none;
+}
+.updateProfileForm > div >svg{
+    position: absolute;
+    transform: translateX(1vmax);
+}
+
+#updateProfileImage img{
+    width: 4vmax;
+    height: 4vmax;
+    border-radius: 50%;
+}
+#updateProfileImage > input{
+    display: flex;
+    padding: 0%;
+}
+
+#updateProfileImage >input::file-selector-button{
+    cursor: pointer;
+    width: 100%;
+    z-index: 2;
+    height: 5vh;
+    border: none;
+    margin: 0%;
+    font: 400 cursive;
+    transition: all 0.3s;
+    padding: 0 1vmax;
+    color: rgba(0, 0, 0, 0.624);
+    background-color: white;
+}
+#updateProfileImage > input::file-selector-button:hover{
+    background-color: rgba(232, 226, 226, 0.794);
+}
+.updateProfileBtn{
+    border: none;
+    background-color: tomato;
+    color: white;
+    font: 400 1.7vmax "Roboto";
+    width: 100%;
+    padding: 0.8vmax;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.353);
+}
+
+.updateProfileBtn:hover{
+    background-color: rgb(223, 49, 18);
+}

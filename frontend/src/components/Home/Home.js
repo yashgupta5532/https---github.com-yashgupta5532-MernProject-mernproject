@@ -8,24 +8,23 @@ import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layouts/Loader/Loader";
 import { useAlert } from "react-alert";
 
-
 const Home = () => {
-  const alert = useAlert()
+  const alert = useAlert();
   const dispatch = useDispatch();
   const { loading, error, products, productsCount } = useSelector(
-    (state) => state.products    //taking from redux store
+    (state) => state.products //taking from redux store
   );
   useEffect(() => {
-    if(error){
+    if (error) {
       alert.error(error);
       dispatch(clearErrors());
     }
     dispatch(getProduct());
-  }, [dispatch,error,alert]);
+  }, [dispatch, error, alert]);
   return (
     <Fragment>
       {loading ? (
-      <Loader/>
+        <Loader />
       ) : (
         <Fragment>
           <MetaData title="Home page is working" />
@@ -41,8 +40,9 @@ const Home = () => {
           <h2 className="homeHeading">Features Products</h2>
           <div className="container" id="container">
             {products &&
-              products.map((product) => <Product key={product._id} product={product} />)}
-              
+              products.map((product) => (
+                <Product key={product._id} product={product} />
+              ))}
           </div>
         </Fragment>
       )}

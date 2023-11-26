@@ -12,7 +12,7 @@
     height: 10vmax;
     border-bottom: 5px solid rgb(163, 155, 155);
     border-radius: 50%;
-    animation: rotateLoading infinite 500ms infinite;
+    animation: rotateLoading infinite 500ms ;
 }
 
 
